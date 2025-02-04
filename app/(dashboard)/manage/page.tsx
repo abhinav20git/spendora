@@ -52,7 +52,6 @@ function CategoryList({type}:{type:TransactionType}){
     const categoriesQuery=useQuery({
         queryKey:["categories",type],
         queryFn:()=>fetch(`/api/categories?type=${type}`).then((res)=>res.json()),
-
     });
     const dataAvailable=categoriesQuery.data && categoriesQuery.data.length>0;
     return(

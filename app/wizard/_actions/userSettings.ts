@@ -10,8 +10,7 @@ export async function UpdateUserCurrency(currency:string){
     const parsedBody=UpdateUserCurrencySchema.safeParse({
         currency,
     });
-
-    // throw new Error("test");
+// throw new Error("test");
 
     if(!parsedBody.success){
         throw parsedBody.error;

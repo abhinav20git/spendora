@@ -18,16 +18,13 @@ export async function GET(request:Request){
     if(!user){
         redirect("/sign-in");
     }
-
     const {searchParams}=new URL(request.url);
     const timeframe=searchParams.get("timeframe");
     const year=searchParams.get("year");
     const month=searchParams.get("month");
-
     const qyueryParams=getHistoryDataSchema.safeParse({
         timeframe,month,year,
     });
-
     if(!qyueryParams.success) {
         return Response.json(qyueryParams.error.message,{
             status:400,
