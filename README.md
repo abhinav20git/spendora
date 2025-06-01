@@ -35,6 +35,3 @@ Spendora is a modern full-stack finance management platform built with **Next.js
 ```bash
 git clone https://github.com/yourusername/spendora.git
 cd spendora
-
-### 2. Install dependencies
-npm install
